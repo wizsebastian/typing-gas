@@ -1,0 +1,120 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.progress-container {
+  width: 100%;
+  max-width: 500px;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #007bff;
+  transition: width 0.5s ease-in-out;
+}
+
+.results {
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.centered {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em; /* Tamaño grande para la palabra */
+}
+
+.chat-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  font-size: 1.2em;
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.highlight {
+  background-color: #e8bb49; /* Color de fondo para resaltar */
+  font-weight: bold; /* Opcional, para hacer el texto resaltado en negrita */
+}
+
+.animate {
+  animation: highlightAnimation 0.5s ease-in-out;
+}
+
+@keyframes highlightAnimation {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #e8bb49;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.color-picker {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.color-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.color-circle:hover {
+  transform: scale(1.2);
+}
