@@ -48,8 +48,13 @@
   justify-content: center;
   align-items: center;
   font-size: 3em; /* Tamaño grande para la palabra */
+
 }
 
+.centered button{
+  margin-bottom: 6px;
+  width: 100%;
+}
 .chat-input {
   width: 100%;
   max-width: 500px;
@@ -113,8 +118,89 @@
   border-radius: 50%;
   cursor: pointer;
   transition: transform 0.3s;
+  border: solid 2px #FFF;
 }
 
 .color-circle:hover {
   transform: scale(1.2);
+}
+
+
+@media (max-width: 600px) {
+  .App {
+    padding: 10px;
+  }
+  
+  .centered {
+    font-size: 2em;
+  }
+  
+  .chat-input {
+    font-size: 1em;
+  }
+  
+  .header {
+    font-size: 1em;
+  }
+}
+
+/* Add these to your existing CSS */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes correct {
+  0% { background-color: green; }
+  100% { background-color: transparent; }
+}
+
+@keyframes incorrect {
+  0% { background-color: red; }
+  100% { background-color: transparent; }
+}
+
+.correct { animation: correct 0.5s; }
+.incorrect { animation: incorrect 0.5s; }
+
+
+@keyframes winAnimation {
+  0% { color: green; transform: scale(1); }
+  50% { color: gold; transform: scale(1.1); }
+  100% { color: green; transform: scale(1); }
+}
+
+@keyframes loseAnimation {
+  0% { color: red; transform: scale(1); }
+  50% { color: darkred; transform: scale(1.1); }
+  100% { color: red; transform: scale(1); }
+}
+
+.game-result {
+  font-size: 4em;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.game-result.win {
+  animation-name: winAnimation;
+}
+
+.game-result.lose {
+  animation-name: loseAnimation;
+}
+
+.game-input{
+  width: 100%;
+  display: flex;
+}
+
+.name-input{
+  display: flex;
+  margin-top: 100%;
 }
